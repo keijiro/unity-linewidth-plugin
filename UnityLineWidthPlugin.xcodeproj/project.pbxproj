@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F31D4FE1839FBF60096E54E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F31D4FD1839FBF60096E54E /* CoreFoundation.framework */; };
 		0F31D5041839FBF60096E54E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F31D5021839FBF60096E54E /* InfoPlist.strings */; };
+		0F31D50D1839FC160096E54E /* UnityLineWidthPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F31D50B1839FC160096E54E /* UnityLineWidthPlugin.cpp */; };
+		0F31D50F1839FC9F0096E54E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F31D50E1839FC9F0096E54E /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		0F31D5011839FBF60096E54E /* UnityLineWidthPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnityLineWidthPlugin-Info.plist"; sourceTree = "<group>"; };
 		0F31D5031839FBF60096E54E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F31D5051839FBF60096E54E /* UnityLineWidthPlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnityLineWidthPlugin-Prefix.pch"; sourceTree = "<group>"; };
+		0F31D50B1839FC160096E54E /* UnityLineWidthPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnityLineWidthPlugin.cpp; sourceTree = "<group>"; };
+		0F31D50E1839FC9F0096E54E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F31D50F1839FC9F0096E54E /* OpenGL.framework in Frameworks */,
 				0F31D4FE1839FBF60096E54E /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +56,7 @@
 		0F31D4FC1839FBF60096E54E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F31D50E1839FC9F0096E54E /* OpenGL.framework */,
 				0F31D4FD1839FBF60096E54E /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
@@ -60,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				0F31D5001839FBF60096E54E /* Supporting Files */,
+				0F31D50B1839FC160096E54E /* UnityLineWidthPlugin.cpp */,
 			);
 			path = UnityLineWidthPlugin;
 			sourceTree = "<group>";
@@ -136,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F31D50D1839FC160096E54E /* UnityLineWidthPlugin.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +165,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -194,6 +203,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
