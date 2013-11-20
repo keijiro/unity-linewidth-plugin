@@ -1,14 +1,9 @@
 #include <OpenGL/OpenGL.h>
 #include <OpenGL/glu.h>
 
-namespace
+extern "C" void UnityLineWidthPlugin_Initialize()
 {
-    float lineWidth = 1.0f;
-}
-
-extern "C" void UnityLineWidthPlugin_SetLineWidth(float width)
-{
-    lineWidth = width;
+    // Do nothing!
 }
 
 extern "C" void UnityRenderEvent(int eventID)
@@ -18,9 +13,9 @@ extern "C" void UnityRenderEvent(int eventID)
         glLineWidth(1.0f);
         glDisable(GL_LINE_SMOOTH);
     }
-    else if (eventID == 1)
+    else
     {
-        glLineWidth(lineWidth);
+        glLineWidth(0.01f * eventID);
         glEnable(GL_LINE_SMOOTH);
     }
 }
